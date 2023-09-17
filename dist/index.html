@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+
+<title>test react</title>
+
+<style>
+.dnd-upload [data-el="items"]:empty { display: none; }
+.dnd-upload [data-el="item"] {
+    display: grid;
+    grid: "name loaded size" "progress progress percent" "errors errors errors" / 1fr 6em 6em;
+}
+.dnd-upload [data-el="name"] { grid-area: name; }
+.dnd-upload [data-el="progress"] { grid-area: progress; }
+.dnd-upload [data-el="percent"] { grid-area: percent; }
+.dnd-upload [data-el="percent"]::after { content: '%'; }
+.dnd-upload [data-el="loaded"] { grid-area: loaded; }
+.dnd-upload [data-el="size"] { grid-area: size; }
+.dnd-upload [data-el="errors"] { grid-area: errors; }
+.dnd-upload [data-el="errors"]:empty { display: none; }
+</style>
+</head>
+<body>
+
+Hello
+
+<div id="app" data-config="{&quot;formaction&quot;:&quot;\/upload&quot;}">Loading &hellip;</div>
+
+Footer
+
+<script src="/static/js/app.js"></script>
+
+</body>
+</html>
